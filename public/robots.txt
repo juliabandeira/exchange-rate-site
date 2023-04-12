@@ -1,3 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+App
+└── Layout: Navbar, footer
+    ├── Home page (route: "/")
+    │   └── Exchange rate table
+    └── Currency page (route: "/currency")
+        └── Currency converter

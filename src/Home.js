@@ -1,4 +1,6 @@
+// Home.js
 import React from "react";
+import currencies from "./utils/currencies";
 
 class Home extends React.Component {
   constructor() {
@@ -27,8 +29,11 @@ class Home extends React.Component {
             onChange={this.changeBase}
             className="form-control form-control-lg mb-2"
           >
-            <option value="USD">USD</option>
-            <option value="USD">EUR</option>
+            {Object.keys(currencies).map((currencyAcronym) => (
+              <option key={currencyAcronym} value={currencyAcronym}>
+                {currencyAcronym}
+              </option>
+            ))}
           </select>
         </form>
       </React.Fragment>
